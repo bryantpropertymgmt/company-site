@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+{{ partial "menu.html" . }}
+
+<main>
+    <div class="maintext">
+        {{ range .Data.Pages }}
+            {{ .Render "full" }}
+            <hr id="{{ .Title | urlize }}-hr">
+        {{ end }}
+    </div>
+</main>
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,72 @@
+##########################
+# Start General Config
+##########################
+
+baseurl = "http://www.bryantpropertymgmt.biz/"
+languageCode = "en-us"
+title = "Bryant Property Management, LLC."
+
+##########################
+# End General Config
+##########################
+
+
+[author]
+    name = "Andrew Bryant"
+
+##########################
+# Start Main Menu Entries
+##########################
+
+[[menu.main]]
+    name = "Home"
+    url= "/"
+    weight = 30
+
+[[menu.main]]
+    name = "Properties"
+    url = "/properties/"
+    weight = 20
+
+[[menu.main]]
+    name = "About Us"
+    url = "/about/"
+    weight = 10
+
+##########################
+# End Main Menu Entries
+##########################
+
+
+##########################
+# Start About Us Submenu
+##########################
+
+[[menu.main]]
+    name = "Biographies"
+    parent = "About Us"
+    weight = 10
+    url = "/about/#biographies"
+
+[[menu.main]]
+    name = "Company History"
+    parent = "About Us"
+    weight = 20
+    url = "/about/#company-history"
+
+[[menu.main]]
+    name = "Mission Statement"
+    parent = "About Us"
+    weight = 30
+    url = "/about/#mission-statement"
+
+[[menu.main]]
+    name = "Vision Statement"
+    parent = "About Us"
+    weight = 40
+    url = "/about/#vision-statement"
+
+##########################
+# End About Us Submenu
+##########################
+

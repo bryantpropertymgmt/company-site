@@ -1,0 +1,246 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Oxygen+Mono);
+		
+
+header {
+	background-color: #383838;
+}
+
+/*hr needs a class for this styling to work*/
+hr.subsectionhr {
+	border: 0; 
+	height: 1px;
+	width: 75%;
+	background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+	background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+	background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+	background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+
+.sectionhr{
+	height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+.maintext {
+	width: 60%;
+	margin: 0 auto 0 auto;
+	padding: 2% 0 2% 0;
+}
+
+	
+/*BEGINNING OF MENU. Based heavily on http://cssmenumaker.com/blog/flat-dropdown-menu-tutorial*/
+/*Basic Template for Functional Menu with SubMenus*/
+#cssmenu {padding: 0; margin: 0; border: 0;}
+#cssmenu ul, #cssmenu li {list-style: none; margin: 0; padding: 0;}
+#cssmenu ul {position: relative; z-index: 597;}
+#cssmenu ul li {float: right; min-height: 1px; vertical-align: middle;}
+#cssmenu ul li.hover, #cssmenu ul li:hover {position: relative; z-index: 599; cursor: default;}
+#cssmenu ul ul {visibility: hidden; position: absolute; top: 100%; left: 0; z-index: 598; width: 100%;}
+#cssmenu ul ul li {float: none;}
+#cssmenu ul ul ul {top: 0; left: auto; right: -99.5%;}
+#cssmenu ul li:hover > ul {visibility: visible;}
+#cssmenu ul ul {bottom: 0; left: 0;}
+#cssmenu ul ul {margin-top: 0;}
+#cssmenu ul ul li {font-weight: normal;}
+#cssmenu a {display: block; line-height: 1em; text-decoration: none;}
+
+/*Flat Menu Characteristics of Sub Menus*/
+#cssmenu {background: #383838; border-bottom: 4px solid #D55700; font-family: 'Oxygen Mono', Tahoma, Arial, sans-serif; font-size: 12px;}
+#cssmenu > ul {*display: inline-block;}
+#cssmenu:after, #cssmenu ul:after {content: '';display: block; clear: both;}
+#cssmenu a {background: #383838; color: #CBCBCB; padding: 0 20px;}
+#cssmenu ul {text-transform: uppercase;}
+#cssmenu ul ul {border-top: 4px solid #FF8E40; text-transform: none; min-width: 190px;}
+#cssmenu ul ul a {background: #FF8E40; color: #FFF; border: 1px solid black; border-top: 0 none; line-height: 150%; padding: 16px 20px;}
+#cssmenu ul ul ul {border-top: 0 none;}
+#cssmenu ul ul li {position: relative;}
+
+
+/*Flat Menu Characteristics of Main Level Menu Items*/
+#cssmenu > ul > li > a {line-height: 48px;}
+#cssmenu ul ul li:first-child > a {border-top: 1px solid #D55700;}
+#cssmenu ul ul li:hover > a {background: #D55700;}
+#cssmenu ul ul li:last-child > a {border-radius: 0 0 3px 3px; box-shadow: 0 1px 0 #D55700;}
+#cssmenu ul ul li:last-child:hover > a {border-radius: 0 0 0 3px;}
+#cssmenu ul ul li.has-sub > a:after {content: '+'; position: absolute; top: 50%; right: 15px; margin-top: -8px;}
+
+#cssmenu ul li:hover > a, #cssmenu ul li.active > a {background: #D55700; color: #FFF;}
+#cssmenu ul li.has-sub > a:after {content: '+'; margin-left: 5px;}
+#cssmenu ul li.last ul {left: auto; right: 0;}
+#cssmenu ul li.last ul ul {left: auto; right: 99.5%;}
+
+
+
+/*BEGINNING OF JUMBOTRON CSS*/
+.jumbotron {
+	margin: 0;
+	padding: 0;
+}
+
+.jumbotron, img {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background: transparent;
+}
+
+#homeheader{
+	background-color: none;
+	padding: 15% 0 0 3%;
+	position: absolute;
+	color: white;
+	margin: none;
+	text-shadow: #444 0 4px 4px;
+	background: transparent;
+}
+
+#hometag {
+	background-color: none;
+	padding: 23% 0 0 7%;
+	position: absolute;
+	color: white;
+	margin: none;
+	text-shadow: #444 0 2px 2px;
+	background: transparent;
+}
+
+
+
+
+
+/*BEGINNING OF HOME PAGE*/
+.img_float_left {
+	clear: right;
+	float:left;
+	width: 50%;
+	padding: 2% 10% 2% 20%;
+}
+
+.img_float_right {
+	clear: left;
+	float: right;
+	width: 50%;
+	padding: 2% 20% 2% 10%;
+}
+
+.homesec {
+	overflow: auto;
+	width: 100%;
+}
+
+.home_para_left {
+	float: left;
+	padding: 2% 0 2% 10%;
+	width: 50%;
+}
+
+.home_para_right {
+	float: right;
+	padding: 2% 10% 2% 0;
+	width: 50%;
+}
+
+/*HOMEPAGE PARAGRAPH EXPAND-COLLAPSE*/
+.read_more_state {
+  display: none;
+}
+
+/*this targets what text will be hidden*/
+.read_more_target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read_more_state:checked ~ .read_more_wrap .read_more_target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read_more_trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: #666;
+  font-size: .9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  border-radius: .25em;
+  clear: both;
+}
+
+.read_more_state ~ .read_more_trigger:before {
+  content: 'Show more';
+}
+
+.read_more_state:checked ~ .read_more_trigger:before {
+  content: 'Show less';
+}
+
+
+#resoucelinks {
+	list-style: none;
+}
+
+/*ABOUT PAGE*/
+.AboutText {
+	margin: 0;
+	padding: 5% 2% 5% 2%;
+}
+
+/*BEGINNING OF FOOTER*/
+footer {
+	background-color: #383838;
+	padding: 2% 2% 2% 2%;
+	position: static;
+	color: #FFFFFF;
+	margin: 0;
+	list-style: none;
+}
+	
+footer li a{
+	list-style: none;
+	color: #FFFFFF;
+	padding: 0;
+	margin: 0;
+}
+	
+.foot_col a:hover {
+	color: D55700;
+}
+	
+.foot_col {
+	clear: right;
+	float: left;
+	width: 25%;
+	padding: 0 0 0 2%;
+	margin: 0;
+	list-style: none;
+	height: 20%;
+	border-left: #ffffff groove 3px;
+}
+
+.foot_col:first-child {
+	border: none;
+}
+
+.foot_col ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+	
+footer p {
+	clear: both;
+	position: relative;
+	margin-top: 3%;
+	margin-left: auto;
+	margin-right:auto;
+	margin-bottom: 0;
+	text-align: center;
+	padding: 2% 0 0 0;
+}

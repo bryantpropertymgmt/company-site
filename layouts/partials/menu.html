@@ -1,0 +1,35 @@
+<header>
+    <nav id='cssmenu'>
+        <ul>
+            {{ $currentNode := . }}
+            {{ range .Site.Menus.main }}
+                {{ if .HasChildren }}
+                    <li class=
+                            "has-sub{{if $currentNode.HasMenuCurrent "main" . }}
+                            {{end}}">
+                        <a href="{{.URL}}" class="">
+                            {{ .Pre }}
+                            <span>{{ .Name }}</span>
+                        </a>
+
+                        <ul>
+                            {{ range .Children }}
+                                <li{{if $currentNode.IsMenuCurrent "main" . }}
+                                        class="active"{{end}}>
+                                    <a href="{{.URL}}"> {{ .Name }} </a>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </li>
+                {{ else }}
+                    <li>
+                        <a class="" href="{{.URL}}">
+                            {{ .Pre }}
+                            <span>{{ .Name }}</span>
+                        </a>
+                    </li>
+                {{ end }}
+            {{ end }}
+        </ul>
+    </nav>
+</header>

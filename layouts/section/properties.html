@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+{{ partial "menu.html" . }}
+
+<main>
+    <div class="maintext">
+        {{ range .Data.Pages }}
+            {{ .Render "full" }}
+        {{ end }}
+    </div>
+</main>
+
+{{ partial "footer.html" . }}
