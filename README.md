@@ -1,2 +1,2 @@
-# company-site
-The Official Website of Bryant Property Management, LLC.
+# static-site-files
+Hugo project for the official Bryant Property Management, LLC. website
