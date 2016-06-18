@@ -6,13 +6,33 @@ baseurl = "http://www.bryantpropertymgmt.biz/"
 languageCode = "en-us"
 title = "Bryant Property Management, LLC."
 
-##########################
-# End General Config
-##########################
-
-
 [author]
     name = "Andrew Bryant"
+
+
+##########################
+# Start Params Definition
+##########################
+
+[params]
+    charset = "UTF-8"
+    description = "Bryant Property Management, LLC."
+    keywords = [
+        "Rental,",
+        "Property,",
+        "Apartment,",
+        "Townhome"
+    ]
+
+    # external site URLs
+    hcaac = "http://hcaac.com/wp1/"
+    pep = "http://www.peponline.org/"
+    hugo = "http://gohugo.io/"
+
+
+##########################
+# Start Menu Definition
+##########################
 
 ##########################
 # Start Main Menu Entries
@@ -32,10 +52,6 @@ title = "Bryant Property Management, LLC."
     name = "About Us"
     url = "/about/"
     weight = 10
-
-##########################
-# End Main Menu Entries
-##########################
 
 
 ##########################
@@ -66,7 +82,4 @@ title = "Bryant Property Management, LLC."
     weight = 40
     url = "/about/#vision-statement"
 
-##########################
-# End About Us Submenu
-##########################
 
