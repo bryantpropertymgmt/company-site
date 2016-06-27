@@ -6,6 +6,10 @@ header {
     background-color: #383838;
 }
 
+body footer {
+    margin-top: 2em;
+}
+
 /*hr needs a class for this styling to work*/
 hr.hr {
     border: 0;
@@ -84,14 +88,17 @@ hr.hr {
     padding: 0;
 }
 
-.jumbotron, img {
+.jumbotron img {
     width: 100%;
+    height: 100%;
+    border: 0;
     padding: 0;
     margin: 0;
     background: transparent;
 }
 
 #homeheader{
+    display: block;
     background-color: none;
     padding: 15% 0 0 3%;
     position: absolute;
@@ -99,6 +106,11 @@ hr.hr {
     margin: none;
     text-shadow: #444 0 4px 4px;
     background: transparent;
+}
+
+.img-header {
+    width: 100%;
+    margin-bottom: 2em;
 }
 
 #hometag {
@@ -116,11 +128,8 @@ hr.hr {
 
 
 /*BEGINNING OF HOME PAGE*/
-.img_float_left {
-    clear: right;
-    float:left;
-    width: 50%;
-    padding: 2% 10% 2% 20%;
+.home-img {
+    width: 80%;
 }
 
 .img_float_right {
