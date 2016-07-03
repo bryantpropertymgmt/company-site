@@ -2,7 +2,7 @@
 {{ partial "menu.html" . }}
 
 <main>
-    <div class="maintext">
+    <div class="container-fluid">
         {{ range .Data.Pages }}
             {{ .Render "full" }}
         {{ end }}

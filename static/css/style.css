@@ -1,13 +1,26 @@
 @charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Oxygen+Mono);
 
-
 header {
     background-color: #383838;
+    margin-bottom: 1em;
+}
+
+.horiz-spacer-xs {
+    height: 0.5em;
+}
+
+.horiz-spacer-sm {
+    height: 1em;
+}
+
+.horiz-center {
+    clear: both;
+    margin: 0 auto 0 auto;
 }
 
 /*hr needs a class for this styling to work*/
-hr.hr {
+.gradient-hr {
     border: 0;
     height: 1px;
     width: 75%;
@@ -28,11 +41,13 @@ hr.hr {
     display: none;
 }
 
+/*
 .maintext {
     width: 60%;
     margin: 0 auto 0 auto;
     padding: 2% 0 2% 0;
 }
+*/
 
 
 /*BEGINNING OF MENU. Based heavily on http://cssmenumaker.com/blog/flat-dropdown-menu-tutorial*/
@@ -79,19 +94,8 @@ hr.hr {
 
 
 /*BEGINNING OF JUMBOTRON CSS*/
-.jumbotron {
-    margin: 0;
-    padding: 0;
-}
-
-.jumbotron, img {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    background: transparent;
-}
-
 #homeheader{
+    display: block;
     background-color: none;
     padding: 15% 0 0 3%;
     position: absolute;
@@ -116,76 +120,15 @@ hr.hr {
 
 
 /*BEGINNING OF HOME PAGE*/
-.img_float_left {
-    clear: right;
-    float:left;
-    width: 50%;
-    padding: 2% 10% 2% 20%;
+.home-img {
+    width: 80%;
 }
 
-.img_float_right {
-    clear: left;
-    float: right;
-    width: 50%;
-    padding: 2% 20% 2% 10%;
-}
 
 .homesec {
     overflow: auto;
     width: 100%;
 }
-
-.home_para_left {
-    float: left;
-    padding: 2% 0 2% 10%;
-    width: 50%;
-}
-
-.home_para_right {
-    float: right;
-    padding: 2% 10% 2% 0;
-    width: 50%;
-}
-
-/*HOMEPAGE PARAGRAPH EXPAND-COLLAPSE*/
-.read_more_state {
-    display: none;
-}
-
-/*this targets what text will be hidden*/
-.read_more_target {
-    opacity: 0;
-    max-height: 0;
-    font-size: 0;
-    transition: .25s ease;
-}
-
-.read_more_state:checked ~ .read_more_wrap .read_more_target {
-    opacity: 1;
-    font-size: inherit;
-    max-height: 999em;
-}
-
-.read_more_trigger {
-    cursor: pointer;
-    display: inline-block;
-    padding: 0 .5em;
-    color: #666;
-    font-size: .9em;
-    line-height: 2;
-    border: 1px solid #ddd;
-    border-radius: .25em;
-    clear: both;
-}
-
-.read_more_state ~ .read_more_trigger:before {
-    content: 'Show more';
-}
-
-.read_more_state:checked ~ .read_more_trigger:before {
-    content: 'Show less';
-}
-
 
 #resoucelinks {
     list-style: none;
@@ -198,12 +141,13 @@ hr.hr {
 }
 
 /*BEGINNING OF FOOTER*/
-footer {
+body footer {
     background-color: #383838;
-    padding: 2% 2% 2% 2%;
+    margin-top: 1em;
+    //padding: 2% 2% 2% 2%;
     position: static;
     color: #FFFFFF;
-    margin: 0;
+    //margin: 0;
     list-style: none;
 }
 
