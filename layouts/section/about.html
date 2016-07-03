@@ -2,10 +2,26 @@
 {{ partial "menu.html" . }}
 
 <main>
-    <div class="maintext">
+    <div class="container-fluid">
         {{ range .Data.Pages }}
             {{ .Render "full" }}
-            <hr id="{{ .Title | urlize }}-hr">
+
+            <div class="row">
+                <div class="col-md-12 horiz-spacer-xs">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <hr id="{{ .Title | urlize }}-hr"
+                        class="gradient-hr">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 horiz-spacer-xs">
+                </div>
+            </div>
         {{ end }}
     </div>
 </main>
