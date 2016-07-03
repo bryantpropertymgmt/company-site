@@ -1,7 +1,5 @@
-<div class="PropertyText">
-    {{ if .Params.available }}
-        {{ range .Params.images }}
-            <image src="{{ . }}">
-        {{ end }}
+{{ if .Params.available }}
+    {{ range .Params.images }}
+        <image class="img-responsive" src="{{ . }}">
     {{ end }}
-</div>
+{{ end }}
